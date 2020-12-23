@@ -83,7 +83,7 @@ body {
 }
 
 .detailImage img {
-  opacity: 80%;
+  opacity: 80%!important;
   width: 35%;
 }
 
