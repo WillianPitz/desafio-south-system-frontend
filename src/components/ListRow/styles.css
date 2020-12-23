@@ -1,0 +1,89 @@
+.listRow {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.listRow strong {
+  font-size: 25px;
+  margin: 0px 0px 0px 30px;
+}
+
+.listRow-listarea {
+  overflow-x: hidden;
+  padding-left: 30px;
+}
+
+.listRow-list {
+  display: flex;
+  transition: all ease 0.5s;
+}
+
+.listRow-item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  background-color: #3c3c3c;
+  border: 2px solid;
+  cursor: pointer;
+
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+
+
+.listRow-item span {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+.listRow-item img {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.listRow-item:hover {
+  transform: scale(1);
+}
+
+.listRow-left,
+.listRow-right {
+  position: absolute;
+  width: 40px;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.listRow-left {
+  left: 0;
+}
+
+.listRow-right {
+  right: 0;
+}
+
+.listRow:hover .listRow-left,
+.listRow:hover .listRow-right {
+  opacity: 1;
+}
+
+@media (max-width: 760px) {
+  .listRow-left,
+  .listRow-right {
+    opacity: 1;
+  }
+  .listRow-left:active,
+  .listRow-right:active {
+    background-color: #DDB547;
+  }
+}
