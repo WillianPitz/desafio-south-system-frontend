@@ -44,7 +44,7 @@ export default function Detail(props){
           ))}
         </div>
         <div className="detailImage">
-          <img src={`/${props.location.imgSrc}/detail/${itemDetail.name || itemDetail.title}.png`} onError={(e) => e.target.src=`/${props.location.imgSrc}/avatar-icon.png`} alt={itemDetail.name || itemDetail.title} />
+          <img src={`/${props.location.imgSrc}/detail/${itemDetail.name || itemDetail.title}.png`} onError={(e) => e.target.src=`/${props.location.imgSrc}/detail/avatar-icon.png`} alt={itemDetail.name || itemDetail.title} />
         </div>
 
       </div>

@@ -25,11 +25,17 @@ body {
   flex: 1;
 }
 
+
 @media (max-width: 760px) {
   .detailContainer{
     flex-direction: unset;
     padding: 20px;
   }
+}
+
+@keyframes leftAnimation {
+  from {margin-left: 0px;}
+  to {margin-left: 100px;}
 }
 
 .infoBox {
@@ -44,11 +50,15 @@ body {
   font-weight: bold;
   font-size: 18px;
   padding: 20px;
+  
+  animation: leftAnimation;
+  animation-duration: 4s;
 }
 
 @media (max-width: 760px) {
  .infoBox {
    margin-left: 0;
+   animation: none;
  }
 }
 
@@ -87,6 +97,19 @@ body {
   width: 35%;
 }
 
+.detailImage img {
+  opacity: 0.8;
+  width: 35%;
+  animation: opacityImage;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+@keyframes opacityImage {
+  from {opacity: 0;}
+  to {opacity: 0.8;}
+}
+
 @media (max-width: 925px) {
   .detailImage img {
     display: none;
@@ -110,6 +133,9 @@ body {
   margin-top: 50px;
   margin-left: 100px;
   transition: all ease 0.2s;
+
+  animation: leftAnimation;
+  animation-duration: 4s;
 }
 
 @media (max-width: 760px) {
